@@ -45,9 +45,6 @@ class _QuoteGeneratorState extends State<QuoteGenerator> {
   String currentImageUrl = "";
   bool isLoading = false;
   
-  // Clé API Pexels
-  final String pexelsApiKey = "CLE_API_PEXELS";
-  
   // Liste de citations
   final List<Map<String, String>> quotes = [
     {
