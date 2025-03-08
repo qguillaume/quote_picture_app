@@ -7,10 +7,14 @@ import 'package:share_plus/share_plus.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'dart:io';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
-void main() {
+void main() async {
+  await dotenv.load();
   runApp(const QuoteApp());
 }
+
+final String pexelsApiKey = dotenv.env['PEXELS_API_KEY'] ?? '';
 
 class QuoteApp extends StatelessWidget {
   const QuoteApp({Key? key}) : super(key: key);
